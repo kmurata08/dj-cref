@@ -10,9 +10,11 @@ setup(
     description="The django generic view output unit",
     license="MIT",
     author="Kazuma Murata",
+    author_email="mrt014kzm@gmail.com",
     packages=find_packages(),
     install_requires=install_requirements,
     keywords="django,generic,output",
+    url="https://github.com/Canon11/dj-cref",
     entry_points={
         "console_scripts": [
             "dj-cref=command.main:main",
