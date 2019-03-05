@@ -6,7 +6,7 @@ with open('requirements.txt') as requirements_file:
 
 setup(
     name="dj-cref",
-    version="0.0.3",
+    version="0.0.5",
     description="The django generic view output unit",
     license="MIT",
     author="Kazuma Murata",
