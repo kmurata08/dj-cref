@@ -14,7 +14,6 @@ def main():
     )
 
     args = parser.parse_args()
-    print(args)
 
     if args.type:
         run(args.type, args.initial)

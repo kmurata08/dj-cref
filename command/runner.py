@@ -18,7 +18,6 @@ class BaseView(metaclass=ABCMeta):
 
         text += self.get_main_text()
         print(text)
-        return text
 
 
 class View(BaseView):
