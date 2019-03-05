@@ -1,7 +1,7 @@
 import argparse
 from view.runner import (
     View, FormView, CreateView, UpdateView, DetailView,
-    DeleteView, TemplateView, ListView
+    DeleteView, TemplateView, ListView, RedirectView
 )
 
 
@@ -39,6 +39,8 @@ def run(t, exists_initial):
         view = TemplateView()
     elif t == 'ListView':
         view = ListView()
+    elif t == 'RedirectView':
+        view = RedirectView()
     else:
         print('type is invalid.')
         return

@@ -284,3 +284,23 @@ class ListView(BaseView):
                     return context
         ''')
         return text
+
+
+class RedirectView(BaseView):
+    def get_main_text(self):
+        text = textwrap.dedent('''\
+            class MyRedirectView(RedirectView):
+                # url = '/redirect/url'
+                # pattern_name = 'article-detail'
+                # permanent = False
+                # query_string = True
+
+                def dispatch(self, request, *args, **kwargs):
+                    super().dispatch(request, *args, **kwargs)
+                    # please implement here
+
+                def get_redirect_url(self, *args, **kwargs):
+                    # please implement here
+                    return super().get_redirect_url(*args, **kwargs)
+        ''')
+        return text
