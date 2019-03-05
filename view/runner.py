@@ -1,7 +1,5 @@
 from abc import abstractmethod, ABCMeta
-
-
-GENERIC_PACKAGE = 'django.views'
+import textwrap
 
 
 class BaseView(metaclass=ABCMeta):
@@ -16,15 +14,33 @@ class BaseView(metaclass=ABCMeta):
     def output(self, needs_import):
         text = ""
         if needs_import:
-            text += self.get_import()
+            text += '%s\n\n\n' % self.get_import()
 
         text += self.get_main_text()
+        print(text)
         return text
 
 
 class View(BaseView):
     def get_main_text(self):
-        text = "dispatch"
+        text = textwrap.dedent('''\
+            class MyView(View):
+                def dispatch(self, request, *args, **kwargs):
+                    super().dispatch(request, *args, **kwargs)
+                    # please implement here
+
+                def http_method_not_allowed(self, request, *args, **kwargs):
+                    # please implement here
+                    super().http_method_not_allowed(request, *args, **kwargs)
+
+                def get(self, request, *args, **kwargs):
+                    # please implement here
+                    pass
+
+                def post(self, request, *args, **kwargs):
+                    # please implement here
+                    pass
+        ''')
         return text
 
 
