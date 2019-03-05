@@ -11,7 +11,7 @@ setup(
     license="MIT",
     author="Kazuma Murata",
     author_email="mrt014kzm@gmail.com",
-    packages=find_packages(exclude=['venv/']),
+    packages=find_packages(exclude=['venv/', 'Makefile']),
     install_requires=install_requirements,
     keywords="django,generic,output",
     url="https://github.com/Canon11/dj-cref",
