@@ -12,13 +12,14 @@ except IOError:
 
 setup(
     name="dj-cref",
-    version="0.0.6",
+    version="0.0.7",
     description="The django generic view output unit",
     license="MIT",
     author="Kazuma Murata",
     author_email="mrt014kzm@gmail.com",
     packages=find_packages(exclude=['venv/', 'Makefile']),
     install_requires=install_requirements,
+    long_description_content_type="text/markdown",
     long_description=readme,
     keywords="django,generic,output",
     url="https://github.com/Canon11/dj-cref",
