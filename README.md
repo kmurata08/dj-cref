@@ -60,7 +60,9 @@ class MyFormView(FormView):
 ```
 
 ## Installation
-comming soon...
+```
+$ pip install dj-cref
+```
 
 ## Author
 [@Canon11](https://github.com/Canon11/)
