@@ -262,5 +262,25 @@ class TemplateView(BaseView):
 
 class ListView(BaseView):
     def get_main_text(self):
-        text = "dispatch"
+        text = textwrap.dedent('''\
+            class MyListView(ListView):
+                # template_name = 'my_template.html'
+                # model = 'MyModel'
+                # allow_empty = True
+                # paginate_by = 10
+
+                def dispatch(self, request, *args, **kwargs):
+                    super().dispatch(request, *args, **kwargs)
+                    # please implement here
+
+                def get_queryset(self):
+                    queryset = self.get_queryset()
+                    # please implement here
+                    return queryset
+
+                def get_context_data(self, **kwargs):
+                    context = super().get_context_data(**kwargs)
+                    # please implement here
+                    return context
+        ''')
         return text
