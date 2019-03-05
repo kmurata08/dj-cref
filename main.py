@@ -1,20 +1,28 @@
 import argparse
+from view.runner import (
+    View, FormView, CreateView, UpdateView, DetailView,
+    DeleteView, TemplateView, ListView
+)
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         '-type', type=str, help='the type of django generic view.')
+    parser.add_argument(
+        '--initial', action='store_true', help='either import or not'
+    )
 
     args = parser.parse_args()
+    print(args)
 
     if args.type:
-        run(args.type)
+        run(args.type, args.initial)
     else:
         print('args.type is undefined.')
 
 
-def run(t):
+def run(t, exists_initial):
     if t == 'View':
         view = View()
     elif t == 'FormView':
@@ -35,7 +43,7 @@ def run(t):
         print('type is invalid.')
         return
 
-    view.output()
+    view.output(exists_initial)
 
 
 if __name__ == '__main__':
