@@ -6,12 +6,12 @@ with open('requirements.txt') as requirements_file:
 
 setup(
     name="dj-cref",
-    version="0.0.1",
+    version="0.0.2",
     description="The django generic view output unit",
     license="MIT",
     author="Kazuma Murata",
     author_email="mrt014kzm@gmail.com",
-    packages=find_packages(),
+    packages=find_packages(exclude=['venv/']),
     install_requires=install_requirements,
     keywords="django,generic,output",
     url="https://github.com/Canon11/dj-cref",
