@@ -130,46 +130,46 @@ class CreateView(BaseView):
 class UpdateView(BaseView):
     def get_main_text(self):
         text = textwrap.dedent('''\
-                class MyUpdateView(UpdateView):
-                    # template_name = 'my_template.html'
-                    # model = 'MyModel'
-                    # fields = ['field1', 'field2']
-                    # form_class = 'MyForm'
-                    # success_url = '/my/success'
+            class MyUpdateView(UpdateView):
+                # template_name = 'my_template.html'
+                # model = 'MyModel'
+                # fields = ['field1', 'field2']
+                # form_class = 'MyForm'
+                # success_url = '/my/success'
 
-                    def dispatch(self, request, *args, **kwargs):
-                        super().dispatch(request, *args, **kwargs)
-                        # please implement here
+                def dispatch(self, request, *args, **kwargs):
+                    super().dispatch(request, *args, **kwargs)
+                    # please implement here
 
-                    def get_context_data(self, **kwargs):
-                        context = super().get_context_data(**kwargs)
-                        # please implement here
-                        return context
+                def get_context_data(self, **kwargs):
+                    context = super().get_context_data(**kwargs)
+                    # please implement here
+                    return context
 
-                    def get_queryset(self):
-                        queryset = self.get_queryset()
-                        # please implement here
-                        return queryset
+                def get_queryset(self):
+                    queryset = self.get_queryset()
+                    # please implement here
+                    return queryset
 
-                    def get_object(self, queryset=None):
-                        obj = self.get_object(queryset)
-                        # please implement here
-                        retur obj
+                def get_object(self, queryset=None):
+                    obj = self.get_object(queryset)
+                    # please implement here
+                    retur obj
 
-                    def form_valid(self, form):
-                        form = super().form_valid(form)
-                        # please implement here
-                        return form
+                def form_valid(self, form):
+                    form = super().form_valid(form)
+                    # please implement here
+                    return form
+                
+                def form_invalid(self, form):
+                    form = super().form_invalid(form)
+                    # please implement here
+                    return form
 
-                    def form_invalid(self, form):
-                        form = super().form_invalid(form)
-                        # please implement here
-                        return form
-
-                    def get_success_url(self):
-                        url = super().get_success_url()
-                        # please implement here
-                        return url
+                def get_success_url(self):
+                    url = super().get_success_url()
+                    # please implement here
+                    return url
         ''')
         return text
 
@@ -177,28 +177,28 @@ class UpdateView(BaseView):
 class DetailView(BaseView):
     def get_main_text(self):
         text = textwrap.dedent('''\
-                class MyDetailView(DetailView):
-                    # template_name = 'my_template.html'
-                    # model = 'MyModel'
+            class MyDetailView(DetailView):
+                # template_name = 'my_template.html'
+                # model = 'MyModel'
 
-                    def dispatch(self, request, *args, **kwargs):
-                        super().dispatch(request, *args, **kwargs)
-                        # please implement here
+                def dispatch(self, request, *args, **kwargs):
+                    super().dispatch(request, *args, **kwargs)
+                    # please implement here
 
-                    def get_queryset(self):
-                        queryset = self.get_queryset()
-                        # please implement here
-                        return queryset
+                def get_queryset(self):
+                    queryset = self.get_queryset()
+                    # please implement here
+                    return queryset
 
-                    def get_object(self, queryset=None):
-                        obj = self.get_object(queryset)
-                        # please implement here
-                        retur obj
+                def get_object(self, queryset=None):
+                    obj = self.get_object(queryset)
+                    # please implement here
+                    retur obj
 
-                    def get_context_data(self, **kwargs):
-                        context = super().get_context_data(**kwargs)
-                        # please implement here
-                        return context
+                def get_context_data(self, **kwargs):
+                    context = super().get_context_data(**kwargs)
+                    # please implement here
+                    return context
         ''')
         return text
 
@@ -206,34 +206,34 @@ class DetailView(BaseView):
 class DeleteView(BaseView):
     def get_main_text(self):
         text = textwrap.dedent('''\
-                class MyDeleteView(DeleteView):
-                    # template_name = 'my_template.html'
-                    # model = 'MyModel'
-                    # success_url = '/my/success'
+            class MyDeleteView(DeleteView):
+                # template_name = 'my_template.html'
+                # model = 'MyModel'
+                # success_url = '/my/success'
 
-                    def dispatch(self, request, *args, **kwargs):
-                        super().dispatch(request, *args, **kwargs)
-                        # please implement here
+                def dispatch(self, request, *args, **kwargs):
+                    super().dispatch(request, *args, **kwargs)
+                    # please implement here
 
-                    def get_context_data(self, **kwargs):
-                        context = super().get_context_data(**kwargs)
-                        # please implement here
-                        return context
+                def get_context_data(self, **kwargs):
+                    context = super().get_context_data(**kwargs)
+                    # please implement here
+                    return context
 
-                    def get_queryset(self):
-                        queryset = self.get_queryset()
-                        # please implement here
-                        return queryset
+                def get_queryset(self):
+                    queryset = self.get_queryset()
+                    # please implement here
+                    return queryset
 
-                    def get_object(self, queryset=None):
-                        obj = self.get_object(queryset)
-                        # please implement here
-                        retur obj
+                def get_object(self, queryset=None):
+                    obj = self.get_object(queryset)
+                    # please implement here
+                    retur obj
 
-                    def get_success_url(self):
-                        url = super().get_success_url()
-                        # please implement here
-                        return url
+                def get_success_url(self):
+                    url = super().get_success_url()
+                    # please implement here
+                    return url
         ''')
         return text
 
