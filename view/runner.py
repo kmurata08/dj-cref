@@ -240,7 +240,23 @@ class DeleteView(BaseView):
 
 class TemplateView(BaseView):
     def get_main_text(self):
-        text = "dispatch"
+        text = textwrap.dedent('''\
+            class MyTemplateView(TemplateView):
+                # template_name = 'my_template.html'
+
+                def dispatch(self, request, *args, **kwargs):
+                    super().dispatch(request, *args, **kwargs)
+                    # please implement here
+
+                def http_method_not_allowed(self, request, *args, **kwargs):
+                    # please implement here
+                    super().http_method_not_allowed(request, *args, **kwargs)
+
+                def get_context_data(self, **kwargs):
+                    context = super().get_context_data(**kwargs)
+                    # please implement here
+                    return context
+        ''')
         return text
 
 
