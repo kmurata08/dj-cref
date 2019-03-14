@@ -34,7 +34,7 @@ def run(t, exists_initial):
         view = DetailView()
     elif t == 'DeleteView':
         view = DeleteView()
-    elif t == 'TemplaveView':
+    elif t == 'TemplateView':
         view = TemplateView()
     elif t == 'ListView':
         view = ListView()

@@ -12,7 +12,7 @@ except IOError:
 
 setup(
     name="dj-cref",
-    version="0.0.7",
+    version="0.0.8",
     description="The django generic view output unit",
     license="MIT",
     author="Kazuma Murata",
