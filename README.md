@@ -5,6 +5,9 @@ The output unit of Django generic view.
 This is the Python package whose name is **dj-cref** .  
 **dj-cref** outputs a template of django generic view you wanted.
 
+![demo](https://raw.githubusercontent.com/wiki/Canon11/dj-cref/images/djcref.gif)
+
+
 ## Features
 ### Output kinds
 - View
